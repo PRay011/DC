@@ -1,0 +1,33 @@
+<!--pages/DetectionSpot/DetectionSpot.wxml-->
+<map class="map" id="myMap" markers="{{markers}}" show-location></map>
+
+
+<button class="positionButton" bindtap="moveToLocation">目前位置</button>
+
+<view class="label">{{name}}核酸点</view>
+<view class="picker_group"> 
+<view class="label">
+选择预约日期：
+</view>
+  <picker mode="date" class="date" value="{{startDate}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChoose">      
+        <view class="picker">  
+          {{chooseDate}}  
+        </view>  
+  </picker> 
+</view>
+<view class="label">
+<label class="chooseTime">选择时间：</label>
+  <view class="value" bindtap="select">
+    <view style="display:inline-block;">{{type!=''?type:'上午或者下午？'}}</view>
+    <image src="../../image/selectTime.png" class="sanjiao" style="{{isSelect?'transform:rotateZ(180deg)':''}}"/>
+    <view class="select" style="{{isSelect?'height:'+54*types.length+'rpx;':'border:0'}}">
+      <view class="type" catchtap="getType" wx:for="{{types}}" data-type="{{item}}" wx:key="type" data-text="{{timeID[index]}}">{{item}}</view>
+    </view>
+  </view>
+</view>
+<view class="label">当前排队人数：{{person_num}}</view>
+<view class="label">已预约人数：{{reserve_num}}</view>
+<view class="label">详情请联系：{{creator}}</view>
+<view class="label">联系电话：{{phone}}</view>
+
+<button class = 'positionButton' style="border:1px solid black;" bindtap='MakeAppointment'>预约</button>

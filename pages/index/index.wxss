@@ -1,0 +1,48 @@
+/**index.wxss**/
+.Self{
+  position: absolute;
+  background-color: #e7e6e6;
+  font-size: 40rpx;
+  border-radius: 0;
+  margin-left: 0px;
+  padding-left: 8px;
+  padding-top: 15px;
+  /* margin-top: 50px; */
+  text-align: center;
+  vertical-align: middle;
+}
+
+.addNew{
+  position: fixed;
+  border:2px black solid;
+  border-radius: 40px;
+  height:40px;
+  width: 40px;
+  margin-left:10px;
+  left:320px;
+  top:-0px;
+}
+
+.spots{
+  margin-top:70px;
+  margin-left: 18%;
+
+}
+
+.spot{
+  height:70px;
+  width: 250px;
+  margin-top: 10px;
+  border: 1px solid black;
+}
+
+.name{
+  padding-left: 10px;
+  font: 25px solid black;
+}
+
+.id{
+  padding-left: 20px;
+  margin-top: 10px;
+  font: 20px solid black;
+}

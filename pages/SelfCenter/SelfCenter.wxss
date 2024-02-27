@@ -1,0 +1,11 @@
+/* pages/SelfCenter/SelfCenter.wxss */
+
+.userinfo-avatar{
+  width:200px;
+  height: 200px;
+  border-radius: 100px;
+}
+.userinfo-nickname{
+  font-size: x-large;
+  margin-left: 80px;
+}

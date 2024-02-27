@@ -1,0 +1,86 @@
+<!--pages/AddNewSpot/AddNewSpot.wxml-->
+
+<form bindsubmit="formSubmit">
+  <view class="information">
+    <view class="info_username"> 申请人姓名：</view>
+    <input name="username" placeholder="例如:张三"/>
+  </view>
+  <view class="information">
+    <view class="info_phone"> 申请人电话：</view>
+    <input name="phone" placeholder=""/>
+  </view>
+  <view class="information">
+    <view class="info_name">核酸点名称：</view>
+    <input name="name" placeholder="请输入核酸点名称"/>
+  </view>
+  <view class="information">
+  
+   <!-- 持续日期 -->
+    <view class="picker_group">  
+      持续日期:
+      <picker mode="date" class="date" value="{{startDate}}" start="{{startDate}}"  end="{{endDate}}" bindchange="bindStartDateChange">      
+        <view class="picker">  
+          {{startDate}}  
+        </view>  
+      </picker>  
+      -  
+      <picker mode="date" class="date" value="{{startDate}}" start="{{endDate}}" end="2050-01-01" bindchange="bindEndDateChange">  
+        <view class="picker">  
+          {{endDate}}  
+        </view>  
+      </picker>        
+    </view>  
+  </view>
+  <view class="information">
+       <!-- 时间段 -->  
+      <view class="picker_group">  
+      时间段:
+      <view class="morning">
+      <picker mode="time" value="{{morStart}}"  start="0:00" end="{{morEnd}}" bindchange="bindMorningStartChange">      
+        <view class="hour" name="morStart">  
+          {{morStart}}  
+        </view>  
+      </picker>  
+      -  
+      <picker mode="time" value="{{morEnd}}" start="{{morStart}}" end="12:00" bindchange="bindMorningEndChange">  
+        <view class="hour" name="morEnd">  
+          {{morEnd}}  
+        </view>  
+      </picker>       
+    </view> 
+    &&
+    <view class="afternoon">
+      <picker mode="time" value="{{afterStart}}" start="12:00" end="{{afterEnd}}" bindchange="bindAfternoonStartChange">      
+        <view class="hour" name="afterStart">  
+          {{afterStart}}  
+        </view>  
+      </picker>  
+      -  
+      <picker mode="time" value="{{afterEnd}}" start="{{afterStart}}" end="24:00" bindchange="bindAfternoonEndChange">  
+        <view class="hour" name="afterEnd">  
+          {{afterEnd}}  
+        </view>  
+      </picker>       
+    </view> 
+    </view>  
+  </view>
+  <view class="information">
+    <view class="info_num">上午最大人数：</view>
+    <input name="morNum" placeholder="例如：500"/>
+  </view>
+  <view class="information">
+    <view class="info_num">上午最大人数：</view>
+    <input name="afterNum" placeholder="例如：500"/>
+  </view>
+  <view class="information">
+    <view class="info_distance">签到距离：</view>
+    <input name="distance" placeholder="请输入多少米以内可签到"/>
+  </view>
+
+<text>请在下方选择核酸点的位置</text>
+<map class="map" id="myMap" markers="{{markers}}" show-location></map>
+<button class="positionButton" bindtap="getCenterLocation">获取位置</button>
+<button class="positionButton" bindtap="moveToLocation">当前所在位置</button>
+
+<button formType="submit">创建核酸点</button>
+</form>

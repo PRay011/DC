@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<!--这里给出两个方式，一个是登录，一个是self页面，区别在于登陆后该按钮会消失-->
+<button style="width: 60px; height: 60px;" class='Self' bindtap='toSelfPage' wx:if="{{!hasUserInfo}}">Self</button>
+<button style="width: 60px; height: 60px; margin-top: -70px;" class='Self' bindtap='toSelfPage' wx:if="{{hasUserInfo}}">Self</button>
+<button class='login' bindtap='toSelfPage' wx:if="{{!hasUserInfo}}">点击此处登录</button>
+<view id='spots' class="spots">
+  <view class='spot' wx:for="{{spots}}" wx:for-item="spots" bindtap='toDetectionSpot' data-text="{{spotsID[index]}}" wx:if="{{hasUserInfo}}">
+    <view class="name">{{spots}}</view>
+    <view class="id">id:{{spotsID[index]}}</view>
+  </view>
+</view>
+<image class='addNew' bindtap='addNewSpot' src="../../image/addNew.png" wx:if="{{hasUserInfo}}"></image>

@@ -1,0 +1,63 @@
+/* pages/Record/Record.wxss */
+.title{
+  font: 35px solid black;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.record{
+  width:80%;
+  height:74px;
+  border:1px solid black;
+  margin-left: 10%;
+  margin-top:10px
+}
+
+.spot{
+  padding-left:10px;
+  width:63%;
+  height:70px;
+  float: left;
+}
+
+.name{
+  font: 21px solid black;
+  padding-top:2px;
+  padding-bottom: 2px;
+}
+
+.day{
+  font: 18px solid black;
+  margin-left: 10px;
+}
+
+.time{
+  font: 15px solid black;
+  margin-left: 10px;
+}
+
+.outStatus{
+  color:white;
+  background-color: red;
+  font: 20px solid white;
+  border-radius: 20px;
+  width:30%;
+  height:50px;
+  margin-left: 68%;
+  margin-top: 10px;
+  text-align: center;
+  line-height:50px;
+}
+
+.inStatus{
+  color:white;
+  background-color: green;
+  font: 20px solid white;
+  border-radius: 20px;
+  width:30%;
+  height:50px;
+  margin-left: 68%;
+  margin-top: 10px;
+  text-align: center;
+  line-height:50px;
+}

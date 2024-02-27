@@ -1,0 +1,78 @@
+/* pages/AddNewSpot/AddNewSpot.wxss */
+.map {
+  height:300px;
+  width: 400px;
+}
+
+.positionButton{
+  left:10px;
+  float:left;
+  margin-left: 100px;
+  margin-top:20px;
+  width:30px;
+  height:40px;
+  color:black;
+  background-color:white;
+}
+
+.information{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx;
+  font-size:20px;
+}
+
+.info{
+  margin-right: 20px;
+}
+
+
+ 
+/* 日期选择 */
+.picker_group {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  width:100%;
+}
+ 
+.date {
+  margin-left: 10px;
+  height: 28px;
+  width:120px;
+  line-height: 30px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.morning{
+  display: flex;
+  margin-left: 10px;
+  height: 28px;
+  width:120px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.afternoon{
+  display: flex;
+  margin-left: 10px;
+  height: 28px;
+  width:120px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.hour{
+  display: flex;
+  margin-left: 0px;
+  height: 28px;
+  width:50px;
+  line-height: 55rpx;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.info_num{
+  width:150px;
+}

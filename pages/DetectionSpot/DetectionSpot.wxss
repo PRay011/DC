@@ -1,0 +1,72 @@
+/* pages/DetectionSpot/DetectionSpot.wxss */
+.label{
+  font-size:20px;
+}
+
+.map {
+  height:400px;
+  width: 400px;
+}
+
+.positionButton{
+  left:10px;
+  margin-left: 100px;
+  margin-top:20px;
+  width:30px;
+  height:40px;
+  color:black;
+  background-color:white;
+  width:100%;
+}
+
+.sanjiao{
+  width: 18px;
+  height: 10px;
+  margin-left: 5px;
+  transition: 0.5s;/* 选转图片过渡 */
+}
+
+.select{
+  position: absolute;
+  z-index: 10;
+  font-size:16px;
+  border: 2rpx solid #aaaaaa;
+  padding: 0 8rpx;
+  top:540px;
+  margin-left: 140px;
+  width: 200px;
+  overflow: auto;
+  height: 0px;
+  max-height: 230px;
+  background-color:#fff;
+  box-sizing: border-box;
+  transition: height 0.5s;/* 高度变换过渡 */
+}
+.select .type{
+  color: rgb(34, 34, 34);
+  border-top: 2px solid #dadada;
+  padding: 6rpx;
+}
+.select :first-child{
+  border: 0;
+}
+
+.chooseTime{
+  float: left;
+  font-size:20px;
+}
+
+.picker_group {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  width:100%;
+}
+
+.date {
+  margin-left: 10px;
+  height: 28px;
+  width:120px;
+  line-height: 30px;
+  text-align: center;
+}

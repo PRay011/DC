@@ -1,0 +1,16 @@
+<!--pages/SelfCenter/SelfCenter.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+    </block>
+    <block wx:else>
+      <view><image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image></view>
+      <view><text class="userinfo-nickname">{{userInfo.nickName}}</text></view>
+
+    </block>
+  </view>
+</view>
+
+<button class = 'Record' bindtap='toRecordPage' wx:if="{{hasUserInfo}}">Record</button>
+<button class = 'Logout' bindtap='Logout' wx:if="{{hasUserInfo}}">Logout</button>
